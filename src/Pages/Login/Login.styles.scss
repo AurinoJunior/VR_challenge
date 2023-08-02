@@ -1,0 +1,25 @@
+.login {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding-left: 6rem;
+
+  &__form {
+    max-width: 720px;
+    max-height: 780px;
+    width: 50%;
+    height: 75%;
+
+    border-radius: 40px;
+
+    background-color: var(--gray-700);
+    z-index: 1;
+  }
+
+  &__img {
+    object-fit: cover;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+}
