@@ -1,0 +1,14 @@
+.button {
+  border: none;
+  border-radius: 15px;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--white);
+  background-color: var(--green-500);
+
+  &:hover {
+    transition: 250ms;
+    filter: brightness(0.8);
+  }
+}
