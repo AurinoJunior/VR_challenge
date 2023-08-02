@@ -14,8 +14,8 @@ export function Login() {
         />
 
         <div className="login__form__fields">
-          <Field label="Usuario" name="user" inputType="text" />
-          <Field label="Senha" name="pass" inputType="password" />
+          <Field label="Usuario" name="user" />
+          <Field label="Senha" name="pass" isSecretField />
         </div>
 
         <Button>Entrar</Button>
