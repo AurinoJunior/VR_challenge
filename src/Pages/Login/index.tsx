@@ -13,7 +13,7 @@ export function Login() {
           description="Faça login e veja todas as informações"
         />
 
-        <div>
+        <div className="login__form__fields">
           <Field label="Usuario" name="user" inputType="text" />
           <Field label="Senha" name="pass" inputType="password" />
         </div>
