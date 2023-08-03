@@ -1,12 +1,22 @@
 .title {
-  text-align: center;
+  &.center {
+    text-align: center;
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
 
   h1 {
     font-weight: 700;
     color: var(--white);
 
     &.dark {
-      color: var(--black);
+      color: var(--gray-700);
     }
   }
 
