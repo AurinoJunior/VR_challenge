@@ -1,4 +1,4 @@
-import { TFormData } from "../../@types/Form";
+import { TFormData } from "../../../@types/Form";
 import "./Field.styles.scss";
 
 import { useState } from "react";
