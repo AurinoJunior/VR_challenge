@@ -2,13 +2,13 @@ import { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { UserContext } from "../../context/user";
-import usersApi from "../../services/usersApi";
 import { IResponseUserData } from "../../@types/User";
+import usersApi from "../../services/usersApi";
+import { parseUserDataResponse } from "../../utils/parseUserDataResponse";
 
 import { Button, Title } from "../../components";
 
 import "./Profile.styles.scss";
-import { parseUserDataResponse } from "../../utils/parseUserDataResponse";
 
 export function Profile() {
   const navigate = useNavigate();

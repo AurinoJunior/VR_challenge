@@ -6,7 +6,6 @@ import { Field } from "../../atoms/Field";
 import { Title } from "../../atoms/Title";
 
 import authApi from "../../../services/authApi";
-
 import { TFormData } from "../../../@types/Form";
 
 import "./Form.styles.scss";

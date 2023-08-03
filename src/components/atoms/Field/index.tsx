@@ -1,7 +1,8 @@
-import { TFormData } from "../../../@types/Form";
-import "./Field.styles.scss";
-
 import { useState } from "react";
+
+import { TFormData } from "../../../@types/Form";
+
+import "./Field.styles.scss";
 
 interface IFieldProps {
   label: string;

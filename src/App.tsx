@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import { UserContext, userInitialValue } from "./context/user";
 import { IUserContextAtributes } from "./@types/User";
 import { Login, Profile } from "./pages";

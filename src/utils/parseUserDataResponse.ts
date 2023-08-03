@@ -1,5 +1,5 @@
-import { IResponseUserData, IUserContextAtributes } from "../@types/User";
 import { userInitialValue } from "../context/user";
+import { IResponseUserData, IUserContextAtributes } from "../@types/User";
 
 export function parseUserDataResponse(
   data: IResponseUserData
