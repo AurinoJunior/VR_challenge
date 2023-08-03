@@ -31,7 +31,6 @@ export function Profile() {
 
   const fullName = `${state.personInfos.firstName} ${state.personInfos.lastName}`;
 
-  console.log(state);
   return (
     <div className="profile">
       <div className="profile__exit-btn">

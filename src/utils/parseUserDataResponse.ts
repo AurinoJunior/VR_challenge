@@ -7,6 +7,7 @@ export function parseUserDataResponse(
   const { address, bank, hair, company } = data;
   let personInfos = userInitialValue.personInfos;
 
+  // Gathers all personal information under a single key
   Object.entries(data).forEach(([chave, valor]) => {
     if (typeof valor !== "object") {
       personInfos = {
@@ -14,7 +15,6 @@ export function parseUserDataResponse(
         [chave]: valor,
       };
     }
-    console.log(personInfos);
   });
 
   return {
