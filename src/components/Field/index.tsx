@@ -43,12 +43,12 @@ export function Field({
     <div className="field">
       <label htmlFor={name}>{label}</label>
       <input
-        value={valueField}
         type={inputType}
         id={name}
         name={name}
-        required
+        value={valueField}
         onChange={(evt) => handleChangeValueField(evt.target.value)}
+        required
       />
 
       {isSecretField && (

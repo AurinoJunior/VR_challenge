@@ -1,9 +1,19 @@
 import { useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { UserContext, userInitialValue } from "./context/user";
-
 import { IUserContextAtributes } from "./@types/User";
+import { Login, Profile } from "./pages";
 
-import { Login } from "./pages";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Login />,
+  },
+  {
+    path: "/perfil/:id",
+    element: <Profile />,
+  },
+]);
 
 export function App() {
   const [userData, setUserData] =
@@ -11,7 +21,7 @@ export function App() {
 
   return (
     <UserContext.Provider value={{ state: userData, dispatch: setUserData }}>
-      <Login />
+      <RouterProvider router={router} />
     </UserContext.Provider>
   );
 }

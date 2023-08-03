@@ -1,14 +1,15 @@
-import { useContext, useState } from "react";
-import { UserContext } from "../../context/user";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import authApi from "../../services/authApi";
 import { Title, Field, Button } from "../../components";
 
 import "./Login.styles.scss";
 import backgroundImage from "../../assets/ilustration-background.svg";
+
 import { TFormData } from "../../@types/Form";
 
-interface IResponseAuthApi {
+interface IResponseLoginApi {
   email: string;
   firstName: string;
   gender: string;
@@ -20,24 +21,18 @@ interface IResponseAuthApi {
 }
 
 export function Login() {
-  const { state, dispatch } = useContext(UserContext);
   const [formData, setFormData] = useState<TFormData>({
     password: "",
     username: "",
   });
+  const navigate = useNavigate();
 
   async function handleSubmitForm(evt: React.FormEvent<HTMLFormElement>) {
     evt.preventDefault();
-    console.log(formData);
-    const { data } = await authApi.post<IResponseAuthApi>("/login", formData);
-
-    dispatch({
-      ...state,
-      id: data.id,
-    });
+    const { data } = await authApi.post<IResponseLoginApi>("/login", formData);
+    navigate(`/perfil/${data.id}`);
   }
 
-  console.log(state.id);
   return (
     <div className="login">
       <form className="login__form" onSubmit={(evt) => handleSubmitForm(evt)}>
