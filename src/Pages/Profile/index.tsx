@@ -1,11 +1,20 @@
 import { useContext, useEffect } from "react";
-import usersApi from "../../services/usersApi";
+import { useNavigate, useParams } from "react-router-dom";
+
 import { UserContext } from "../../context/user";
-import { useParams } from "react-router-dom";
+import usersApi from "../../services/usersApi";
+import { Button } from "../../components";
+
+import "./Profile.styles.scss";
 
 export function Profile() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const { dispatch } = useContext(UserContext);
+
+  function handleExitProfile() {
+    navigate("/");
+  }
 
   useEffect(() => {
     async function getUserData() {
@@ -16,5 +25,13 @@ export function Profile() {
     getUserData();
   }, [dispatch, id]);
 
-  return <>Todas as infos</>;
+  return (
+    <div className="profile">
+      <div className="profile__exit-btn">
+        <Button buttonType="button" onClick={handleExitProfile}>
+          Sair
+        </Button>
+      </div>
+    </div>
+  );
 }

@@ -9,6 +9,8 @@ import authApi from "../../../services/authApi";
 
 import { TFormData } from "../../../@types/Form";
 
+import "./Form.styles.scss";
+
 interface IResponseLoginApi {
   email: string;
   firstName: string;
@@ -34,13 +36,13 @@ export function Form() {
   }
 
   return (
-    <form className="login__form" onSubmit={(evt) => handleSubmitForm(evt)}>
+    <form className="form" onSubmit={(evt) => handleSubmitForm(evt)}>
       <Title
         title="Seja bem-vindo"
         description="Faça login e veja todas as informações"
       />
 
-      <div className="login__form__fields">
+      <div className="form__fields">
         <Field
           label="Usuario"
           name="username"
