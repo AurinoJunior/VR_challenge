@@ -7,24 +7,26 @@ export interface IUserContextAtributes {
   gender: string;
   email: string;
   phone: string;
+  username: string;
   birthDate: string;
   image: string;
   bloodGroup: string;
   height: number | null;
   weight: number | null;
   eyeColor: string;
+  domain: string;
+  university: string;
+  ein: string;
   hair: {
     color: string;
     type: string;
   };
-  domain: string;
   address: {
     address: string;
     city: string;
     postalCode: string;
     state: string;
   };
-  university: string;
   bank: {
     cardExpire: string;
     cardNumber: number | null;
@@ -43,5 +45,4 @@ export interface IUserContextAtributes {
     name: string;
     title: string;
   };
-  ein: string;
 }

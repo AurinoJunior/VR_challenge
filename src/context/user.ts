@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { IUserContextAtributes } from "../@types/User";
 
-export const userInitialValue = {
+export const userInitialValue: IUserContextAtributes = {
   id: null,
   firstName: "",
   lastName: "",
@@ -10,24 +10,26 @@ export const userInitialValue = {
   gender: "",
   email: "",
   phone: "",
+  username: "",
   birthDate: "",
   image: "",
   bloodGroup: "",
   height: null,
   weight: null,
   eyeColor: "",
+  university: "",
+  domain: "",
+  ein: "",
   hair: {
     color: "",
     type: "",
   },
-  domain: "",
   address: {
     address: "",
     city: "",
     postalCode: "",
     state: "",
   },
-  university: "",
   bank: {
     cardExpire: "",
     cardNumber: null,
@@ -46,7 +48,6 @@ export const userInitialValue = {
     name: "",
     title: "",
   },
-  ein: "",
 };
 
 interface IContextProps {

@@ -3,14 +3,14 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { UserContext } from "../../context/user";
 import usersApi from "../../services/usersApi";
-import { Button } from "../../components";
+import { Button, Title } from "../../components";
 
 import "./Profile.styles.scss";
 
 export function Profile() {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { dispatch } = useContext(UserContext);
+  const { state, dispatch } = useContext(UserContext);
 
   function handleExitProfile() {
     navigate("/");
@@ -25,6 +25,7 @@ export function Profile() {
     getUserData();
   }, [dispatch, id]);
 
+  const fullName = `${state.firstName} ${state.maidenName} ${state.lastName}`;
   return (
     <div className="profile">
       <div className="profile__exit-btn">
@@ -32,6 +33,15 @@ export function Profile() {
           Sair
         </Button>
       </div>
+
+      <div className="profile__container-img">
+        <img src={state.image} alt="foto de perfil" width={240} />
+      </div>
+      <Title
+        title={fullName}
+        description={`@${state.username}`}
+        darkVariation
+      />
     </div>
   );
 }
