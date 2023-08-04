@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../../atoms/Button";
 import { Field } from "../../atoms/Field";
 import { Title } from "../../atoms/Title";
+import { notify } from "../../atoms/Toast";
 
 import authApi from "../../../services/authApi";
 import { TFormData } from "../../../@types/Form";
 
 import "./Form.styles.scss";
-import { notify } from "../../atoms/Toast";
 
 interface IResponseLoginApi {
   email: string;
