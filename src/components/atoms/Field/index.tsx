@@ -1,26 +1,18 @@
-import { useState } from "react";
-
-import { TFormData } from "../../../@types/Form";
+import { useContext, useState } from "react";
 
 import "./Field.styles.scss";
+import { FormContext } from "../../../context/form";
 
 interface IFieldProps {
   label: string;
   name: string;
-  valueField: string;
-  getValueField: React.Dispatch<React.SetStateAction<TFormData>>;
   isSecretField?: boolean;
 }
 
 type TInputType = "text" | "password";
 
-export function Field({
-  label,
-  isSecretField = false,
-  name,
-  valueField,
-  getValueField,
-}: IFieldProps) {
+export function Field({ label, isSecretField = false, name }: IFieldProps) {
+  const { state, dispatch } = useContext(FormContext);
   const [inputType, setInputType] = useState<TInputType>(
     isSecretField ? "password" : "text"
   );
@@ -34,7 +26,7 @@ export function Field({
   }
 
   function handleChangeValueField(value: string) {
-    getValueField((oldState) => ({
+    dispatch((oldState) => ({
       ...oldState,
       [name]: value,
     }));
@@ -47,7 +39,7 @@ export function Field({
         type={inputType}
         id={name}
         name={name}
-        value={valueField}
+        value={state[name]}
         onChange={(evt) => handleChangeValueField(evt.target.value)}
         required
       />
