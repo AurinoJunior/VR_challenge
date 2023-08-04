@@ -73,6 +73,13 @@ export interface IUserContextAtributes {
     color: string;
     type: string;
   };
+  bank: {
+    cardExpire: string;
+    cardNumber: number | null;
+    cardType: string;
+    currency: string;
+    iban: string;
+  };
   address: {
     address: string;
     city: string;
@@ -82,13 +89,6 @@ export interface IUserContextAtributes {
     };
     postalCode: string;
     state: string;
-  };
-  bank: {
-    cardExpire: string;
-    cardNumber: number | null;
-    cardType: string;
-    currency: string;
-    iban: string;
   };
   company: {
     address: {

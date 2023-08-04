@@ -8,6 +8,8 @@ import usersApi from "../../services/usersApi";
 
 import { Button, Title } from "../../components";
 import { PersonInfos } from "./partials/PersonInfos";
+import { Hair } from "./partials/Hair";
+import { Bank } from "./partials/Bank";
 
 import "./Profile.styles.scss";
 
@@ -50,6 +52,8 @@ export function Profile() {
       />
 
       <PersonInfos />
+      <Hair />
+      <Bank />
     </div>
   );
 }
