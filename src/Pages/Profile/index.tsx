@@ -6,7 +6,7 @@ import { IResponseUserData } from "../../@types/User";
 import { parseUserDataResponse } from "../../utils/parseUserDataResponse";
 import usersApi from "../../services/usersApi";
 
-import { Button, List, MultiList, Title } from "../../components";
+import { Button, List, Title } from "../../components";
 
 import "./Profile.styles.scss";
 
@@ -51,9 +51,9 @@ export function Profile() {
       <div className="profile__content">
         <List title="Informações pessoais" data={state.personInfos} />
         <List title="Cabelo" data={state.hair} />
-        <MultiList title="Endereço" data={state.address} />
+        <List title="Endereço" data={state.address} />
         <List title="Banco" data={state.bank} />
-        <MultiList title="Empresa" data={state.company} />
+        <List title="Empresa" data={state.company} />
       </div>
     </div>
   );
