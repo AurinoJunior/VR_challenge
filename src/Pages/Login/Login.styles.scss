@@ -1,13 +1,24 @@
+@use "../../styles/breakpoints" as b;
+
 .login {
   display: flex;
   align-items: center;
-
+  justify-content: center;
   height: 100vh;
-  padding-left: 6rem;
 
   &__img {
-    object-fit: cover;
-    position: fixed;
-    right: 0;
+    display: none;
+  }
+
+  @include b.responsive(b.$desktop) {
+    padding-left: 6rem;
+    justify-content: start;
+
+    &__img {
+      display: block;
+      object-fit: cover;
+      position: fixed;
+      right: 0;
+    }
   }
 }

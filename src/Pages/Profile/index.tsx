@@ -48,11 +48,13 @@ export function Profile() {
         darkVariation
       />
 
-      <List title="Informações pessoais" data={state.personInfos} />
-      <List title="Cabelo" data={state.hair} />
-      <MultiList title="Endereço" data={state.address} />
-      <List title="Banco" data={state.bank} />
-      <MultiList title="Empresa" data={state.company} />
+      <div className="profile__content">
+        <List title="Informações pessoais" data={state.personInfos} />
+        <List title="Cabelo" data={state.hair} />
+        <MultiList title="Endereço" data={state.address} />
+        <List title="Banco" data={state.bank} />
+        <MultiList title="Empresa" data={state.company} />
+      </div>
     </div>
   );
 }

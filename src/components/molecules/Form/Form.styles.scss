@@ -1,15 +1,25 @@
+@use "../../../styles/breakpoints" as b;
+
 .form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
 
-  max-width: 720px;
-  max-height: 780px;
-  width: 50%;
-  padding: 4rem;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
 
-  border-radius: var(--border-radius-larger);
   background-color: var(--gray-700);
   z-index: 1;
+  
+  @include b.responsive(b.$desktop) {
+    max-width: 720px;
+    max-height: 780px;
+    width: 50%;
+    height: auto;
+    padding: 4rem;
+
+    border-radius: var(--border-radius-larger);
+  }
 }

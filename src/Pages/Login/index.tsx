@@ -1,6 +1,6 @@
 import "./Login.styles.scss";
 
-import backgroundImage from "../../assets/ilustration-background.svg";
+import backgroundImage from "../../images/ilustration-background.svg";
 import { Form } from "../../components";
 
 export function Login() {

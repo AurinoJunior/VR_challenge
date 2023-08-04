@@ -1,7 +1,6 @@
-.profile {
-  width: 50%;
-  margin: 0 auto;
+@use "../../styles/breakpoints" as b;
 
+.profile {
   &__exit-btn {
     width: 100%;
     padding: 1rem;    
@@ -11,8 +10,7 @@
   &__container-img {
     width: 240px;
     height: 240px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
+    margin: 2rem auto;
     border-radius: 50%;
     border: 4px solid var(--gray-700);
     display: flex;
@@ -23,6 +21,22 @@
     img {
       border-radius: 50%;
       z-index: -1;
+    }
+  }
+
+  &__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @include b.responsive(b.$desktop) {
+    &__exit-btn {
+      padding: 1rem 2rem;    
+    }
+
+    &__content {
+      width: 50%;
+      margin: 0 auto;
     }
   }
 }
