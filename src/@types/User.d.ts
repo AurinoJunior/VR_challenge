@@ -8,32 +8,34 @@ export interface IResponseUserData {
   email: string;
   phone: string;
   username: string;
+  password: string;
   birthDate: string;
   image: string;
   bloodGroup: string;
   height: number;
   weight: number;
   eyeColor: string;
-  domain: string;
-  university: string;
-  ein: string;
   hair: {
     color: string;
     type: string;
   };
+  domain: string;
+  ip: string;
   address: {
+    address: string;
+    city: string;
     coordinates: {
       lat: number;
       lng: number;
     };
-    address: string;
-    city: string;
     postalCode: string;
     state: string;
   };
+  macAddress: string;
+  university: string;
   bank: {
     cardExpire: string;
-    cardNumber: number;
+    cardNumber: number | string | null;
     cardType: string;
     currency: string;
     iban: string;
@@ -42,17 +44,20 @@ export interface IResponseUserData {
     address: {
       address: string;
       city: string;
-      postalCode: number;
       coordinates: {
-        lat: number | null;
-        lng: number | null;
+        lat: number;
+        lng: number;
       };
+      postalCode: string;
       state: string;
     };
     department: string;
     name: string;
     title: string;
   };
+  ein: string;
+  ssn: string;
+  userAgent: string;
 }
 
 export interface IUserContextAtributes {
@@ -82,7 +87,7 @@ export interface IUserContextAtributes {
   };
   bank: {
     cardExpire: string;
-    cardNumber: number | null;
+    cardNumber: string | number | null;
     cardType: string;
     currency: string;
     iban: string;
@@ -101,11 +106,11 @@ export interface IUserContextAtributes {
     address: {
       address: string;
       city: string;
-      postalCode: number | null;
       coordinates: {
         lat: number | null;
         lng: number | null;
       };
+      postalCode: string | number | null;
       state: string;
     };
     department: string;
