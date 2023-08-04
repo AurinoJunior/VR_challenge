@@ -1,15 +1,15 @@
 import { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { UserContext } from "../../context/user";
-import { IResponseUserData } from "../../@types/User";
-import { parseUserDataResponse } from "../../utils/parseUserDataResponse";
-import usersApi from "../../services/usersApi";
+import { UserContext } from "../../../context/user";
+import { IResponseUserData } from "../../../@types/User";
+import { parseUserDataResponse } from "../../../utils/parseUserDataResponse";
+import usersApi from "../../../services/usersApi";
 
-import { Button, List, Title } from "../../components";
+import { Button, List, Title } from "../..";
 
 import "./Profile.styles.scss";
-import { notify } from "../../components/atoms/Toast";
+import { notify } from "../../atoms/Toast";
 
 export function Profile() {
   const navigate = useNavigate();
