@@ -6,10 +6,7 @@ import { IResponseUserData } from "../../@types/User";
 import { parseUserDataResponse } from "../../utils/parseUserDataResponse";
 import usersApi from "../../services/usersApi";
 
-import { Button, Title } from "../../components";
-import { PersonInfos } from "./partials/PersonInfos";
-import { Hair } from "./partials/Hair";
-import { Bank } from "./partials/Bank";
+import { Button, List, Title } from "../../components";
 
 import "./Profile.styles.scss";
 
@@ -51,9 +48,9 @@ export function Profile() {
         darkVariation
       />
 
-      <PersonInfos />
-      <Hair />
-      <Bank />
+      <List title="Informações pessoais" data={state.personInfos} />
+      <List title="Cabelo" data={state.hair} />
+      <List title="Banco" data={state.bank} />
     </div>
   );
 }

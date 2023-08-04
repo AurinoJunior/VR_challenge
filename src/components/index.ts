@@ -6,5 +6,6 @@ import { ListItem } from "./atoms/ListItem";
 
 // Molecules
 import { Form } from "./molecules/Form";
+import { List } from "./molecules/List";
 
-export { Title, Field, Button, Form, ListItem };
+export { Title, Field, Button, Form, ListItem, List };
