@@ -30,7 +30,6 @@ export function Profile() {
   }, [dispatch, id]);
 
   const fullName = `${state.personInfos.firstName} ${state.personInfos.lastName}`;
-  console.log(state.company);
   return (
     <div className="profile">
       <div className="profile__exit-btn">
