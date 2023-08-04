@@ -10,6 +10,16 @@
     display: none;
   }
 
+  @include b.responsive(b.$tablet) {
+    justify-content: center;
+
+    &__img {
+      display: block;
+      position: fixed;
+      height: 100%;
+    }
+  }
+
   @include b.responsive(b.$desktop) {
     padding-left: 6rem;
     justify-content: start;
