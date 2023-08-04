@@ -29,9 +29,18 @@ export function Form() {
   const navigate = useNavigate();
 
   async function handleSubmitForm(evt: React.FormEvent<HTMLFormElement>) {
-    evt.preventDefault();
-    const { data } = await authApi.post<IResponseLoginApi>("/login", formData);
-    navigate(`/perfil/${data.id}`);
+    try {
+      evt.preventDefault();
+      const { data } = await authApi.post<IResponseLoginApi>(
+        "/login",
+        formData
+      );
+      navigate(`/perfil/${data.id}`);
+    } catch (error) {
+      if (error instanceof Error) {
+        console.log("Deu ruim", error.message);
+      }
+    }
   }
 
   return (

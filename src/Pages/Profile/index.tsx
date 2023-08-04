@@ -21,9 +21,13 @@ export function Profile() {
 
   useEffect(() => {
     async function getUserData() {
-      const { data } = await usersApi.get<IResponseUserData>(`/${id}`);
-      const parsedUserData = parseUserDataResponse(data);
-      dispatch(parsedUserData);
+      try {
+        const { data } = await usersApi.get<IResponseUserData>(`/${id}`);
+        const parsedUserData = parseUserDataResponse(data);
+        dispatch(parsedUserData);
+      } catch (error) {
+        if (error instanceof Error) console.log(error.message);
+      }
     }
 
     getUserData();
