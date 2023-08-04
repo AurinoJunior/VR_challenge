@@ -3,7 +3,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { UserContext, userInitialValue } from "./context/user";
 import { IUserContextAtributes } from "./@types/User";
+
 import { Login, Profile } from "./pages";
+import { Toast } from "./components";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,7 @@ export function App() {
   return (
     <UserContext.Provider value={{ state: userData, dispatch: setUserData }}>
       <RouterProvider router={router} />
+      <Toast />
     </UserContext.Provider>
   );
 }

@@ -9,6 +9,7 @@ import usersApi from "../../services/usersApi";
 import { Button, List, Title } from "../../components";
 
 import "./Profile.styles.scss";
+import { notify } from "../../components/atoms/Toast";
 
 export function Profile() {
   const navigate = useNavigate();
@@ -26,7 +27,10 @@ export function Profile() {
         const parsedUserData = parseUserDataResponse(data);
         dispatch(parsedUserData);
       } catch (error) {
-        if (error instanceof Error) console.log(error.message);
+        if (error instanceof Error)
+          notify(
+            "Ops, houve um problema inesperado, tente recarregar a pagina."
+          );
       }
     }
 

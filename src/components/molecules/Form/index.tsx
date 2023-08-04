@@ -9,6 +9,7 @@ import authApi from "../../../services/authApi";
 import { TFormData } from "../../../@types/Form";
 
 import "./Form.styles.scss";
+import { notify } from "../../atoms/Toast";
 
 interface IResponseLoginApi {
   email: string;
@@ -38,7 +39,7 @@ export function Form() {
       navigate(`/perfil/${data.id}`);
     } catch (error) {
       if (error instanceof Error) {
-        console.log("Deu ruim", error.message);
+        notify("Ops, parece que os dados inseridos estão incorretos");
       }
     }
   }
