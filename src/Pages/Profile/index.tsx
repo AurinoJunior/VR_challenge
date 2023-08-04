@@ -6,7 +6,7 @@ import { IResponseUserData } from "../../@types/User";
 import { parseUserDataResponse } from "../../utils/parseUserDataResponse";
 import usersApi from "../../services/usersApi";
 
-import { Button, List, Title } from "../../components";
+import { Button, List, MultiList, Title } from "../../components";
 
 import "./Profile.styles.scss";
 
@@ -30,6 +30,7 @@ export function Profile() {
   }, [dispatch, id]);
 
   const fullName = `${state.personInfos.firstName} ${state.personInfos.lastName}`;
+  console.log(state.company);
   return (
     <div className="profile">
       <div className="profile__exit-btn">
@@ -50,7 +51,9 @@ export function Profile() {
 
       <List title="Informações pessoais" data={state.personInfos} />
       <List title="Cabelo" data={state.hair} />
+      <MultiList title="Endereço" data={state.address} />
       <List title="Banco" data={state.bank} />
+      <MultiList title="Empresa" data={state.company} />
     </div>
   );
 }

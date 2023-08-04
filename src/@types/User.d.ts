@@ -1,9 +1,9 @@
 export interface IResponseUserData {
-  id: number | null;
+  id: number;
   firstName: string;
   lastName: string;
   maidenName: string;
-  age: number | null;
+  age: number;
   gender: string;
   email: string;
   phone: string;
@@ -11,8 +11,8 @@ export interface IResponseUserData {
   birthDate: string;
   image: string;
   bloodGroup: string;
-  height: number | null;
-  weight: number | null;
+  height: number;
+  weight: number;
   eyeColor: string;
   domain: string;
   university: string;
@@ -22,15 +22,18 @@ export interface IResponseUserData {
     type: string;
   };
   address: {
+    coordinates: {
+      lat: number;
+      lng: number;
+    };
     address: string;
     city: string;
-    coordinates: { lat: number; lng: number };
     postalCode: string;
     state: string;
   };
   bank: {
     cardExpire: string;
-    cardNumber: number | null;
+    cardNumber: number;
     cardType: string;
     currency: string;
     iban: string;
@@ -39,7 +42,11 @@ export interface IResponseUserData {
     address: {
       address: string;
       city: string;
-      postalCode: number | null;
+      postalCode: number;
+      coordinates: {
+        lat: number | null;
+        lng: number | null;
+      };
       state: string;
     };
     department: string;
@@ -95,6 +102,10 @@ export interface IUserContextAtributes {
       address: string;
       city: string;
       postalCode: number | null;
+      coordinates: {
+        lat: number | null;
+        lng: number | null;
+      };
       state: string;
     };
     department: string;
