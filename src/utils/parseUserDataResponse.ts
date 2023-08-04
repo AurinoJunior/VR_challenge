@@ -8,11 +8,11 @@ export function parseUserDataResponse(
   let personInfos = userInitialValue.personInfos;
 
   // Gathers all personal information under a single key
-  Object.entries(data).forEach(([chave, valor]) => {
-    if (typeof valor !== "object") {
+  Object.entries(data).forEach(([key, value]) => {
+    if (typeof value !== "object") {
       personInfos = {
         ...personInfos,
-        [chave]: valor,
+        [key]: value,
       };
     }
   });

@@ -3,10 +3,11 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { UserContext } from "../../context/user";
 import { IResponseUserData } from "../../@types/User";
-import usersApi from "../../services/usersApi";
 import { parseUserDataResponse } from "../../utils/parseUserDataResponse";
+import usersApi from "../../services/usersApi";
 
 import { Button, Title } from "../../components";
+import { PersonInfos } from "./partials/PersonInfos";
 
 import "./Profile.styles.scss";
 
@@ -30,7 +31,6 @@ export function Profile() {
   }, [dispatch, id]);
 
   const fullName = `${state.personInfos.firstName} ${state.personInfos.lastName}`;
-
   return (
     <div className="profile">
       <div className="profile__exit-btn">
@@ -42,15 +42,14 @@ export function Profile() {
       <div className="profile__container-img">
         <img src={state.personInfos.image} alt="foto de perfil" width={240} />
       </div>
+
       <Title
         title={fullName}
         description={`@${state.personInfos.username}`}
         darkVariation
       />
-      <div className="profile__person-infos">
-        <Title title="Informações pessoais" darkVariation position="left" />
-        <hr />
-      </div>
+
+      <PersonInfos />
     </div>
   );
 }

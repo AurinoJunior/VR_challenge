@@ -29,6 +29,10 @@ export const userInitialValue: IUserContextAtributes = {
   address: {
     address: "",
     city: "",
+    coordinates: {
+      lat: null,
+      lng: null,
+    },
     postalCode: "",
     state: "",
   },

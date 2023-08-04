@@ -24,6 +24,7 @@ export interface IResponseUserData {
   address: {
     address: string;
     city: string;
+    coordinates: { lat: number; lng: number };
     postalCode: string;
     state: string;
   };
@@ -75,6 +76,10 @@ export interface IUserContextAtributes {
   address: {
     address: string;
     city: string;
+    coordinates: {
+      lat: number | null;
+      lng: number | null;
+    };
     postalCode: string;
     state: string;
   };
