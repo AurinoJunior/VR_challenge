@@ -1,4 +1,3 @@
-import { createContext } from "react";
 import { IUserContextAtributes } from "../@types/User";
 
 export const userInitialValue: IUserContextAtributes = {
@@ -59,12 +58,3 @@ export const userInitialValue: IUserContextAtributes = {
     title: "",
   },
 };
-
-interface IContextProps {
-  state: IUserContextAtributes;
-  dispatch: React.Dispatch<React.SetStateAction<IUserContextAtributes>>;
-}
-export const UserContext = createContext<IContextProps>({
-  state: userInitialValue,
-  dispatch: () => {},
-});
