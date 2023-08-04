@@ -53,7 +53,7 @@ describe("Field", () => {
     expect(checkbox).toBeInTheDocument();
   });
 
-  it("should show password when click checkbox button", () => {
+  it("should show password when click checkbox", () => {
     render(
       <Field
         label="test"
@@ -72,7 +72,7 @@ describe("Field", () => {
     expect(input).toHaveAttribute("type", "text");
   });
 
-  it("should hide password when click checkbox button", () => {
+  it("should hide password when click checkbox", () => {
     render(
       <Field
         label="test"
