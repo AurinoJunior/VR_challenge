@@ -10,7 +10,7 @@
 
   input {
     border: none;
-    border-radius: 15px;
+    border-radius: var(--border-radius-medium);
     padding: 1rem;
     font-size: 1.25rem;
     color: var(--white);

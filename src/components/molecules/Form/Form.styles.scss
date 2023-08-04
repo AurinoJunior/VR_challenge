@@ -9,7 +9,7 @@
   width: 50%;
   padding: 4rem;
 
-  border-radius: 40px;
+  border-radius: var(--border-radius-larger);
   background-color: var(--gray-700);
   z-index: 1;
 }

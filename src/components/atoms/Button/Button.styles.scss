@@ -1,7 +1,7 @@
 .button {
   min-width: 8rem;
   border: none;
-  border-radius: 15px;
+  border-radius: var(--border-radius-medium);
   padding: 1rem;
   font-weight: 700;
   font-size: 1.25rem;
