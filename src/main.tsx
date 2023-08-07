@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import { Toast } from "./components";
+import { Toast, AuthComponent } from "./components";
 import { Login, Profile } from "./components/pages";
 
 import "./styles/global.scss";
@@ -14,7 +14,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/perfil/:id",
-    element: <Profile />,
+    element: (
+      <AuthComponent>
+        <Profile />
+      </AuthComponent>
+    ),
   },
 ]);
 

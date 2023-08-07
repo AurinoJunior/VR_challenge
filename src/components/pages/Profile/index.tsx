@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { IResponseUserData, IUserContextAtributes } from "../../../@types/User";
+import { IUserContextAtributes } from "../../../@types/User";
 import { parseUserDataResponse } from "../../../utils/parseUserDataResponse";
 import { userInitialValue } from "../../../utils/userInitialValue";
-import usersApi from "../../../services/usersApi";
+import { api } from "../../../services/api";
 
 import { Button, List, Title } from "../..";
 import { notify } from "../../atoms/Toast";
@@ -18,14 +18,15 @@ export function Profile() {
   const { id } = useParams();
 
   function handleExitProfile() {
+    localStorage.removeItem("vr-case@user");
     navigate("/");
   }
 
   useEffect(() => {
     async function getUserData() {
       try {
-        const { data } = await usersApi.get<IResponseUserData>(`/${id}`);
-        const parsedUserData = parseUserDataResponse(data);
+        const response = await api.users(Number(id));
+        const parsedUserData = parseUserDataResponse(response);
         setUserData(parsedUserData);
       } catch (error) {
         if (error instanceof Error)
