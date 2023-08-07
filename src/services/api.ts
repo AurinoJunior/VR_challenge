@@ -1,17 +1,7 @@
 import axios from "axios";
 import { TFormData } from "../@types/Form";
 import { IResponseUserData } from "../@types/User";
-
-interface IResponseLoginApi {
-  email: string;
-  firstName: string;
-  gender: string;
-  id: number;
-  image: string;
-  lastName: string;
-  token: string;
-  username: string;
-}
+import { IResponseLoginApi } from "../@types/Login";
 
 const axiosInstance = axios.create({
   baseURL: "https://dummyjson.com",
