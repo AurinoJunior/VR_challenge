@@ -33,6 +33,7 @@ Link para o site: https://vr-challenge.vercel.app/
 - ReactJs
 - Sass
 - Vitest
+- Cypress
 - Github Actions
 - Vercel (para o deploy da aplicação e uso da cdn).
 
@@ -63,4 +64,4 @@ password: 9uQFF1Lh
 
 - [x] ~Criar um pipeline ci-cd~
 - [x] ~Subir site para produção~
-- [ ] Criar uma suite de testes E2E com cypress.
+- [x] ~Criar uma suite de testes E2E com cypress.~
