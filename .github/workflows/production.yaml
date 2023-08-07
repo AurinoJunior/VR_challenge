@@ -7,6 +7,15 @@ on:
     branches:
       - main
 jobs:
+  Tests-E2E:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install
+      - name: Run tests e2e
+        run: yarn test:e2e
+
   Deploy-Production:
     runs-on: ubuntu-latest
     steps:

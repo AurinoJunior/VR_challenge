@@ -8,6 +8,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+cypress/videos
+cypress/fixtures
+cypress/downloads
 coverage
 dist
 dist-ssr
