@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 
-import "./Field.styles.scss";
+import "./FormField.styles.scss";
 import { FormContext } from "../../../context/form";
 
 interface IFieldProps {
@@ -11,7 +11,7 @@ interface IFieldProps {
 
 type TInputType = "text" | "password";
 
-export function Field({ label, isSecretField = false, name }: IFieldProps) {
+export function FormField({ label, isSecretField = false, name }: IFieldProps) {
   const { state, dispatch } = useContext(FormContext);
   const [inputType, setInputType] = useState<TInputType>(
     isSecretField ? "password" : "text"

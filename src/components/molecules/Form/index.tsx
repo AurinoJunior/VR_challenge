@@ -1,5 +1,5 @@
 import { Button } from "../../atoms/Button";
-import { Field } from "../../atoms/Field";
+import { FormField } from "../../atoms/FormField";
 import { Title } from "../../atoms/Title";
 
 import "./Form.styles.scss";
@@ -17,8 +17,8 @@ export function Form({ onSubmit }: IFormProps) {
       />
 
       <div className="form__fields">
-        <Field label="Usuario" name="username" />
-        <Field label="Senha" name="password" isSecretField />
+        <FormField label="Usuario" name="username" />
+        <FormField label="Senha" name="password" isSecretField />
       </div>
 
       <Button>Entrar</Button>
