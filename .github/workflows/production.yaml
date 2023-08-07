@@ -7,17 +7,14 @@ on:
     branches:
       - main
 jobs:
-  Linters:
+  Linters-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run linter
+      - name: Install dependencies
+        run: yarn install
+      - name: Run linters
         run: yarn lint
-
-  Unit-Tests:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
       - name: Run unit tests
         run: yarn test
 
