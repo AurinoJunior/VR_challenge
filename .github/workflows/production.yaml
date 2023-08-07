@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: yarn install
+      - name: Install Vercel CLI
+        run: npm install --global cypress
       - name: Run tests e2e
-        run: yarn test:e2e
+        run: cypress run
 
   Deploy-Production:
     runs-on: ubuntu-latest
