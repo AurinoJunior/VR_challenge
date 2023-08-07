@@ -24,7 +24,7 @@
 
 Essa é uma aplicação em react com uma pagina de login e após o login é possivel ver as informações do usuario, feito como um case para vr.
 
-Link para o site: https://vr-challenge.vercel.app/
+Link para o site: https://vr-challenger.vercel.app/
 
 ## :computer: Tecnologias
 
@@ -58,7 +58,7 @@ username: atuny0
 password: 9uQFF1Lh
 ```
 
-É possivel ver o site online em https://vr-challenge.vercel.app/ 🔥
+É possivel ver o site online em https://vr-challenger.vercel.app/ 🔥
 
 ## :page_with_curl: Proximos passos
 
