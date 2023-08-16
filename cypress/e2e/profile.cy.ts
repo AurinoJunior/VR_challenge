@@ -1,6 +1,6 @@
 describe("Profile page", () => {
   it("should render profile page", () => {
-    cy.visit("https://vr-challenger.vercel.app/");
+    cy.visit("https://vr-challenge.vercel.app/");
 
     cy.get("[name='username']").type("atuny0");
     cy.get("[name='password']").type("9uQFF1Lh");
@@ -10,7 +10,7 @@ describe("Profile page", () => {
   });
 
   it("should back to login page", () => {
-    cy.visit("https://vr-challenger.vercel.app/");
+    cy.visit("https://vr-challenge.vercel.app/");
 
     cy.get("[name='username']").type("atuny0");
     cy.get("[name='password']").type("9uQFF1Lh");
