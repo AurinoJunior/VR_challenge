@@ -24,7 +24,7 @@ export function Login() {
     try {
       evt.preventDefault();
       const response = await api.login(formData);
-      localStorage.setItem("vr-case@user", response.token);
+      localStorage.setItem("login-screen@user", response.token);
       navigate(`/perfil/${response.id}`);
     } catch (error) {
       if (error instanceof Error) {
@@ -40,7 +40,7 @@ export function Login() {
         <img
           className="login__img"
           src={backgroundImage}
-          alt="Ilustração de um homem com uma camiseta verde com o logo da VR e varios objetos na cor verde."
+          alt="Ilustração de um homem com uma camiseta verde com o logo e varios objetos na cor verde."
           width={1100}
         />
       </div>

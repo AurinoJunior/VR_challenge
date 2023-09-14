@@ -1,5 +1,5 @@
 {
-  "name": "vr-challenge",
+  "name": "login-screen",
   "private": true,
   "engines": {
     "node": ">=18"

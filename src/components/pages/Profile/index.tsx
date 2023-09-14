@@ -18,7 +18,7 @@ export function Profile() {
   const { id } = useParams();
 
   function handleExitProfile() {
-    localStorage.removeItem("vr-case@user");
+    localStorage.removeItem("login-screen@user");
     navigate("/");
   }
 

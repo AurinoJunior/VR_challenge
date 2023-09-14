@@ -12,7 +12,7 @@ interface IAuthComponentProps {
 export function AuthComponent({ children }: IAuthComponentProps) {
   const { id } = useParams();
 
-  const token = localStorage.getItem("vr-case@user");
+  const token = localStorage.getItem("login-screen@user");
   if (!token) {
     return <Login />;
   }

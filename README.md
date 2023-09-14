@@ -40,11 +40,10 @@ Essa é uma aplicação em react com uma pagina de login autenticada, após o lo
 
 Para iniciar o projeto siga as instruções abaixo:
 
-1. clone o repositorio `git clone https://github.com/AurinoJunior/VR_challenge`
-2. Instale as dependencias `yarn install`.
-3. Execute o projeto com `yarn start`.
-4. O projetoo estará disponivel no link `http://localhost:8000`
-5. Para rodar os testes `yarn test` ou `yarn coverage` para ver a cobertura.
+1. Instale as dependencias `yarn install`.
+2. Execute o projeto com `yarn start`.
+3. O projetoo estará disponivel no link `http://localhost:8000`
+4. Para rodar os testes `yarn test` ou `yarn coverage` para ver a cobertura.
 
 ## :beers: Como usar
 
@@ -54,6 +53,8 @@ Para fazer o login e ver as informações foi usado a api https://dummyjson.com/
 username: atuny0
 password: 9uQFF1Lh
 ```
+
+Os testes E2E não etão funcionando porque a aplicação não está mais online
 
 ## :page_with_curl: Proximos passos
 
