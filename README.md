@@ -1,6 +1,5 @@
 <div align="center">
-  <img src="https://portal-trabalhador.vr.com.br/static/media/novalogovr.0be0f72e.png" width="100" />
-   <h3>VR Case</h3>
+   <h3>Tela de Login</h3>
 </div>
 
 <p align="center">
@@ -22,9 +21,7 @@
 
 ## :blue_book: Contexto
 
-Essa é uma aplicação em react com uma pagina de login e após o login é possivel ver as informações do usuario, feito como um case para vr.
-
-Link para o site: https://vr-challenge.vercel.app/
+Essa é uma aplicação em react com uma pagina de login autenticada, após o login é possivel ver as informações do usuario logado.
 
 ## :computer: Tecnologias
 
@@ -57,8 +54,6 @@ Para fazer o login e ver as informações foi usado a api https://dummyjson.com/
 username: atuny0
 password: 9uQFF1Lh
 ```
-
-É possivel ver o site online em https://vr-challenge.vercel.app/ 🔥
 
 ## :page_with_curl: Proximos passos
 
